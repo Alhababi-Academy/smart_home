@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "174156976000",
+    "project_id": "smartextension-a3758",
+    "storage_bucket": "smartextension-a3758.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:174156976000:android:c88250e726552f9cfefb65",
+        "android_client_info": {
+          "package_name": "com.example.smart_extension"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "174156976000-42urdkob8rakj2lhma88mgb9bm2b7in5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBK5rBwYncXoU_uEz-eCF7W9P-aAp6obKI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "174156976000-42urdkob8rakj2lhma88mgb9bm2b7in5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
