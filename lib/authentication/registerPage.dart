@@ -113,7 +113,9 @@ class _RegisterPageState extends State<RegisterPage> {
                             ),
                           ),
                           backgroundColor: MaterialStateProperty.all(
-                            const Color(0XFF6382b0),
+                            const Color(
+                              0XFF4ce0d4,
+                            ),
                           ),
                         ),
                         child: const Padding(

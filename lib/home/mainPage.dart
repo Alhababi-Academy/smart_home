@@ -66,177 +66,99 @@ class _MainPage extends State<MainPage> with SingleTickerProviderStateMixin {
                     final allData = Map<dynamic, dynamic>.from((snapshot.data!)
                         .snapshot
                         .value as Map<dynamic, dynamic>); //typecasting
-                    int hum = allData['hum'];
-                    int temp = allData['temp'];
-                    String extenstion = allData['extension'];
+                    String hum = allData['Devices']['Device1']['status'];
 
-                    if (temp.toString().isNotEmpty) {
-                      checkForNewSharedLists(hum, temp, extenstion);
-                    }
                     return Container(
                       height: MediaQuery.of(context).size.height,
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Center(
-                          child: ListView.builder(
-                            itemCount: 1,
-                            shrinkWrap: true,
-                            itemBuilder: (context, index) {
-                              // if (gettingTheCuerrentUser != user!.uid) {
-                              return Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
+                        child: ListView.builder(
+                          itemCount: 1,
+                          shrinkWrap: true,
+                          itemBuilder: (context, index) {
+                            // if (gettingTheCuerrentUser != user!.uid) {
+                            return Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Container(
+                                  height: 60,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(10),
+                                    color: Colors.grey,
+                                  ),
+                                  padding: const EdgeInsets.all(10),
+                                  child: const Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
                                     children: [
-                                      const Text("The Extension is: "),
-                                      Container(
-                                        padding: const EdgeInsets.symmetric(
-                                            vertical: 10, horizontal: 15),
-                                        decoration: BoxDecoration(
-                                          borderRadius:
-                                              BorderRadius.circular(30),
-                                          color: extenstion == "OFF"
-                                              ? Colors.red
-                                              : Colors.green,
-                                        ),
-                                        child: Text(
-                                          extenstion.toString(),
-                                          style: const TextStyle(
-                                              color: Colors.white,
-                                              fontWeight: FontWeight.bold),
+                                      CircleAvatar(),
+                                      Text("Device 1"),
+                                      Text(
+                                        "OFF",
+                                        style: TextStyle(
+                                          color: Colors.red,
+                                          fontWeight: FontWeight.bold,
                                         ),
                                       ),
                                     ],
                                   ),
-                                  CustomPaint(
-                                    foregroundPainter:
-                                        CircleProgress(temp, true, false),
-                                    child: SizedBox(
-                                      width: 170,
-                                      height: 170,
-                                      child: Center(
-                                        child: Column(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          children: <Widget>[
-                                            const Text('Temperature'),
-                                            Text(
-                                              '${allData['temp']}',
-                                              style: const TextStyle(
-                                                  fontSize: 50,
-                                                  fontWeight: FontWeight.bold),
-                                            ),
-                                            const Text(
-                                              '°C',
-                                              style: TextStyle(
-                                                  fontSize: 20,
-                                                  fontWeight: FontWeight.bold),
-                                            ),
-                                          ],
+                                ),
+                                const SizedBox(
+                                  height: 10,
+                                ),
+                                Container(
+                                  height: 60,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(10),
+                                    color: Colors.grey,
+                                  ),
+                                  padding: const EdgeInsets.all(10),
+                                  child: const Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      CircleAvatar(),
+                                      Text("Device 2"),
+                                      Text(
+                                        "ON",
+                                        style: TextStyle(
+                                          color: Colors.green,
+                                          fontWeight: FontWeight.bold,
                                         ),
                                       ),
-                                    ),
+                                    ],
                                   ),
-                                  CustomPaint(
-                                    foregroundPainter:
-                                        CircleProgress(hum, false, false),
-                                    child: SizedBox(
-                                      width: 170,
-                                      height: 170,
-                                      child: Center(
-                                        child: Column(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          children: <Widget>[
-                                            const Text('Humidity'),
-                                            Text(
-                                              allData['hum'].toString(),
-                                              style: const TextStyle(
-                                                  fontSize: 50,
-                                                  fontWeight: FontWeight.bold),
-                                            ),
-                                            const Text(
-                                              '%',
-                                              style: TextStyle(
-                                                  fontSize: 20,
-                                                  fontWeight: FontWeight.bold),
-                                            ),
-                                          ],
+                                ),
+                                const SizedBox(
+                                  height: 10,
+                                ),
+                                Container(
+                                  height: 60,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(10),
+                                    color: Colors.grey,
+                                  ),
+                                  padding: const EdgeInsets.all(10),
+                                  child: const Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      CircleAvatar(),
+                                      Text("Device 3"),
+                                      Text(
+                                        "ON",
+                                        style: TextStyle(
+                                          color: Colors.green,
+                                          fontWeight: FontWeight.bold,
                                         ),
                                       ),
-                                    ),
+                                    ],
                                   ),
-
-                                  ElevatedButton(
-                                    onPressed: () {
-                                      controlExtension(extenstion);
-                                    },
-                                    style: ButtonStyle(
-                                      shape: MaterialStateProperty.all(
-                                        RoundedRectangleBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(50),
-                                        ),
-                                      ),
-                                      backgroundColor:
-                                          MaterialStateProperty.all(
-                                        const Color(0XFF6382b0),
-                                      ),
-                                    ),
-                                    child: extenstion == "OFF"
-                                        ? Padding(
-                                            padding: const EdgeInsets.symmetric(
-                                                horizontal: 10, vertical: 15),
-                                            child: const Text(
-                                              "Turn ON",
-                                              style: TextStyle(fontSize: 20),
-                                            ),
-                                          )
-                                        : Padding(
-                                            padding: const EdgeInsets.symmetric(
-                                                horizontal: 10, vertical: 15),
-                                            child: const Text(
-                                              "Turn OFF",
-                                              style: TextStyle(
-                                                fontSize: 20,
-                                              ),
-                                            ),
-                                          ),
-                                  ),
-                                  // CustomPaint(
-                                  //   foregroundPainter:
-                                  //       CircleProgress(soil.abs(), false, true),
-                                  //   child: SizedBox(
-                                  //     width: 200,
-                                  //     height: 200,
-                                  //     child: Center(
-                                  //       child: Column(
-                                  //         mainAxisAlignment: MainAxisAlignment.center,
-                                  //         children: <Widget>[
-                                  //           const Text('Soil Level'),
-                                  //           Text(
-                                  //             soil.abs().toString(),
-                                  //             style: const TextStyle(
-                                  //                 fontSize: 50,
-                                  //                 fontWeight: FontWeight.bold),
-                                  //           ),
-                                  //           const Text(
-                                  //             '',
-                                  //             style: TextStyle(
-                                  //                 fontSize: 20,
-                                  //                 fontWeight: FontWeight.bold),
-                                  //           ),
-                                  //         ],
-                                  //       ),
-                                  //     ),
-                                  //   ),
-                                  // )
-                                ],
-                              );
-                            },
-                          ),
+                                ),
+                              ],
+                            );
+                          },
                         ),
                       ),
                     );

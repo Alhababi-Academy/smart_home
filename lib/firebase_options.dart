@@ -50,20 +50,22 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDh_GGrNtH0LjIHOygeyOHlmAzTzPFiIkE',
-    appId: '1:172318013433:android:6df284d2ced7d449e4af28',
-    messagingSenderId: '172318013433',
-    projectId: 'esclate-3d326',
-    storageBucket: 'esclate-3d326.appspot.com',
+    apiKey: 'AIzaSyBo6Deak8Kj0ZANgtQ5scPcNoYDdAAFyxo',
+    appId: '1:837208654499:android:acecf7003eac37f058b516',
+    messagingSenderId: '837208654499',
+    projectId: 'smarthome-f8c0d',
+    databaseURL: 'https://smarthome-f8c0d-default-rtdb.firebaseio.com',
+    storageBucket: 'smarthome-f8c0d.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDHjMC2hT8la3i1su9G-9IN779hSPfseM0',
-    appId: '1:172318013433:ios:25a38ad29d7da33be4af28',
-    messagingSenderId: '172318013433',
-    projectId: 'esclate-3d326',
-    storageBucket: 'esclate-3d326.appspot.com',
-    iosClientId: '172318013433-ks3rij8jpj22fcnarri9sgthhkvj8g2h.apps.googleusercontent.com',
+    apiKey: 'AIzaSyCg0Yryei7FYSGEL11GYCKA4eavmP0UMZA',
+    appId: '1:837208654499:ios:4397168b7f7bab2a58b516',
+    messagingSenderId: '837208654499',
+    projectId: 'smarthome-f8c0d',
+    databaseURL: 'https://smarthome-f8c0d-default-rtdb.firebaseio.com',
+    storageBucket: 'smarthome-f8c0d.appspot.com',
+    iosClientId: '837208654499-k4tcthg4d782cf89a5c5rm48995mkugu.apps.googleusercontent.com',
     iosBundleId: 'com.example.smartExtension',
   );
 }

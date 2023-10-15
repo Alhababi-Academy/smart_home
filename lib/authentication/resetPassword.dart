@@ -19,6 +19,7 @@ class resetPassword extends StatelessWidget {
         centerTitle: true,
       ),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           SingleChildScrollView(
             child: SafeArea(
@@ -29,7 +30,7 @@ class resetPassword extends StatelessWidget {
                   Column(
                     children: [
                       Image.asset(
-                        "images/2.png",
+                        "images/smartHome.png",
                         width: MediaQuery.of(context).size.width * 0.6,
                       ),
                     ],
@@ -82,7 +83,9 @@ class resetPassword extends StatelessWidget {
                               ),
                             ),
                             backgroundColor: MaterialStateProperty.all(
-                              const Color(0XFF6382b0),
+                              const Color(
+                                0XFF4ce0d4,
+                              ),
                             ),
                           ),
                           child: const Padding(

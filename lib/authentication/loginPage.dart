@@ -34,11 +34,10 @@ class _loginPageState extends State<loginPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset(
-                "images/2.png",
-                width: 170,
+                "images/smartHome.png",
               ),
               const Padding(
-                padding: EdgeInsets.all(8.0),
+                padding: EdgeInsets.all(16.0),
                 child: Text(
                   "Login Here",
                   style: TextStyle(
@@ -82,7 +81,9 @@ class _loginPageState extends State<loginPage> {
                     ),
                   ),
                   backgroundColor: MaterialStateProperty.all(
-                    const Color(0XFF6382b0),
+                    const Color(
+                      0XFF4ce0d4,
+                    ),
                   ),
                 ),
                 child: const Padding(

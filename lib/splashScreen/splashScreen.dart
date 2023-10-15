@@ -43,7 +43,6 @@ class _splashScreenState extends State<splashScreen> {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Color(0Xff271d3b),
       child: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -51,7 +50,7 @@ class _splashScreenState extends State<splashScreen> {
             Container(
               margin: const EdgeInsets.all(20),
               child: Image.asset(
-                "images/2.png",
+                "images/smartHome.png",
                 fit: BoxFit.fitHeight,
               ),
             ),

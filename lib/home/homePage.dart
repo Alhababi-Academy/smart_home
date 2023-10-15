@@ -22,7 +22,7 @@ class _homePage extends State<homePage> {
 
   final _pages = [
     MainPage(),
-    sendingData(),
+    // sendingData(),
     editProfile(),
   ];
 
@@ -64,10 +64,15 @@ class _homePage extends State<homePage> {
             icon: Icon(Icons.home),
             label: 'Live',
           ),
+          // BottomNavigationBarItem(
+          //   icon: Icon(Icons.save),
+          //   label: 'Saved Data',
+          // ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.save),
-            label: 'Saved Data',
-          ),
+              icon: Icon(
+                Icons.add,
+              ),
+              label: "Add Device"),
           BottomNavigationBarItem(
             icon: Icon(Icons.info),
             label: 'Profile',
