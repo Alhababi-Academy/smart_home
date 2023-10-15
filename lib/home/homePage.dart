@@ -1,10 +1,8 @@
-import 'dart:async';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:smart_extension/authentication/loginPage.dart';
 import 'package:smart_extension/home/updateProfile.dart';
 import 'package:smart_extension/home/mainPage.dart';
-import 'package:smart_extension/home/sendingData.dart';
 import 'package:smart_extension/widgets/sharedPrefrences.dart';
 
 class homePage extends StatefulWidget {
@@ -68,11 +66,11 @@ class _homePage extends State<homePage> {
           //   icon: Icon(Icons.save),
           //   label: 'Saved Data',
           // ),
-          BottomNavigationBarItem(
-              icon: Icon(
-                Icons.add,
-              ),
-              label: "Add Device"),
+          // BottomNavigationBarItem(
+          //     icon: Icon(
+          //       Icons.add,
+          //     ),
+          //     label: "Add Device"),
           BottomNavigationBarItem(
             icon: Icon(Icons.info),
             label: 'Profile',
