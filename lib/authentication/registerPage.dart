@@ -1,7 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:smart_extension/DialogBox/errorDialog.dart';
 import 'package:smart_extension/DialogBox/loadingDialog.dart';
@@ -216,7 +215,7 @@ class _RegisterPageState extends State<RegisterPage> {
     sharedPreferences.setString(
         "name", _nameTextEditingController.text.toString());
     Navigator.pop(context);
-    Route route = MaterialPageRoute(builder: (context) => const homePage());
+    Route route = MaterialPageRoute(builder: (context) => const HomePage());
     Navigator.pushReplacement(context, route);
   }
 }

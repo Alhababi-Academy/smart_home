@@ -196,7 +196,7 @@ class _loginPageState extends State<loginPage> {
 
       sharedPreferences.setString("name", result.data()!['fullName']);
       Navigator.pop(context);
-      Route route = MaterialPageRoute(builder: (context) => const homePage());
+      Route route = MaterialPageRoute(builder: (context) => const HomePage());
       Navigator.pushReplacement(context, route);
     });
   }

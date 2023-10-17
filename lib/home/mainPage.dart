@@ -36,13 +36,13 @@ class _MainPage extends State<MainPage> {
 
                   return Card(
                     elevation: 5,
-                    margin: EdgeInsets.all(10),
+                    margin: const EdgeInsets.all(10),
                     child: ListTile(
                       leading: CircleAvatar(
                         backgroundColor: isOn ? Colors.green : Colors.red,
                         child: Text(
                           isOn ? "ON" : "OFF",
-                          style: TextStyle(color: Colors.white),
+                          style: const TextStyle(color: Colors.white),
                         ),
                       ),
                       title: Text(deviceName),
@@ -50,17 +50,17 @@ class _MainPage extends State<MainPage> {
                         onPressed: () {
                           controlExtension(deviceName, isOn);
                         },
-                        child: Text(isOn ? "Turn OFF" : "Turn ON"),
                         style: ElevatedButton.styleFrom(
-                          primary: isOn ? Colors.red : Colors.green,
+                          backgroundColor: isOn ? Colors.red : Colors.green,
                         ),
+                        child: Text(isOn ? "Turn OFF" : "Turn ON"),
                       ),
                     ),
                   );
                 },
               );
             } else {
-              return Center(
+              return const Center(
                 child:
                     CircularProgressIndicator(), // Display a loading indicator.
               );

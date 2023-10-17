@@ -3,7 +3,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:smart_extension/authentication/chooicPage.dart';
 import 'package:smart_extension/home/homePage.dart';
-import '../authentication/loginPage.dart';
 
 class splashScreen extends StatefulWidget {
   const splashScreen({Key? key}) : super(key: key);
@@ -26,7 +25,7 @@ class _splashScreenState extends State<splashScreen> {
         Navigator.pushReplacement(
           context,
           MaterialPageRoute(
-            builder: (_) => const homePage(),
+            builder: (_) => const HomePage(),
           ),
         );
       } else {
@@ -50,7 +49,7 @@ class _splashScreenState extends State<splashScreen> {
             Container(
               margin: const EdgeInsets.all(20),
               child: Image.asset(
-                "images/smartHome.png",
+                "images/dd.png",
                 fit: BoxFit.fitHeight,
               ),
             ),
