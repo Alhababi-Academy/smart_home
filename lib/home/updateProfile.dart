@@ -114,7 +114,7 @@ class _editProfile extends State<editProfile> {
                       ),
                       backgroundColor: MaterialStateProperty.all(
                         const Color(
-                          0XFF4ce0d4,
+                          0XFF7e65bf,
                         ),
                       ),
                     ),

@@ -34,7 +34,7 @@ class _loginPageState extends State<loginPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset(
-                "images/smartHome.png",
+                "images/extension.png",
               ),
               const Padding(
                 padding: EdgeInsets.all(16.0),

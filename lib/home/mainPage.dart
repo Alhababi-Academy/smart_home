@@ -17,6 +17,7 @@ class _MainPage extends State<MainPage> {
     return Scaffold(
       body: Container(
         height: MediaQuery.of(context).size.height,
+        // This is to call data from firebase
         child: StreamBuilder(
           stream: databaseReference.child('Devices').onValue,
           builder: (context, snapshot) {

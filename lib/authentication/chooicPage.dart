@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:smart_extension/authentication/loginPage.dart';
 import 'package:smart_extension/authentication/registerPage.dart';
 
@@ -19,7 +17,7 @@ class _ChooicePageState extends State<ChooicePage> {
         child: Container(
           decoration: const BoxDecoration(
             image: DecorationImage(
-              image: AssetImage("images/smartHome.png"),
+              image: AssetImage("images/extension.png"),
             ),
           ),
           child: Container(
@@ -43,7 +41,7 @@ class _ChooicePageState extends State<ChooicePage> {
                             ),
                           ),
                           backgroundColor: MaterialStateProperty.all(
-                            const Color(0XFF4ce0d4),
+                            const Color(0XFF7e65bf),
                           ),
                         ),
                         child: const Padding(
@@ -71,7 +69,7 @@ class _ChooicePageState extends State<ChooicePage> {
                             ),
                           ),
                           backgroundColor: MaterialStateProperty.all(
-                            const Color(0XFF4ce0d4),
+                            const Color(0XFF7e65bf),
                           ),
                         ),
                         child: const Padding(

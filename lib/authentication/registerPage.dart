@@ -46,7 +46,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       SizedBox(
                         height: 200,
                         child: Image.asset(
-                          "images/smartHome.png",
+                          "images/dd.png",
                           width: 250,
                         ),
                       ),
@@ -55,7 +55,7 @@ class _RegisterPageState extends State<RegisterPage> {
                         child: Text(
                           "Register Here",
                           style: TextStyle(
-                            color: Color(0XFF4ce0d4),
+                            color: Color(0XFF7e65bf),
                             fontSize: 24,
                             fontWeight: FontWeight.bold,
                           ),
@@ -112,9 +112,7 @@ class _RegisterPageState extends State<RegisterPage> {
                             ),
                           ),
                           backgroundColor: MaterialStateProperty.all(
-                            const Color(
-                              0XFF4ce0d4,
-                            ),
+                            const Color(0XFF7e65bf),
                           ),
                         ),
                         child: const Padding(
@@ -195,7 +193,7 @@ class _RegisterPageState extends State<RegisterPage> {
       showDialog(
         context: context,
         builder: (c) => ErrorAlertDialog(
-          message: "check",
+          message: error.toString(),
         ),
       );
     });
